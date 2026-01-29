@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definiciones</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const concepts = document.querySelectorAll('.definition-box strong');
+            concepts.forEach(concept => {
+                concept.style.cursor = 'pointer';
+                const definition = concept.nextElementSibling;
+                definition.style.display = 'none';
+                concept.addEventListener('click', () => {
+                    if (definition.style.display === 'none') {
+                        definition.style.display = 'block';
+                    } else {
+                        definition.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Definiciones Clave en Desarrollo Web</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Conceptos</h2>
+            <div class="definition-box">
+                <strong>HTML:</strong>
+                <p>Lenguaje de marcado que estructura el contenido de una página web.</p>
+            </div>
+            <div class="definition-box">
+                <strong>CSS:</strong>
+                <p>Lenguaje de estilos que define la apariencia visual de los elementos HTML.</p>
+            </div>
+            <div class="definition-box">
+                <strong>JavaScript:</strong>
+                <p>Lenguaje de programación que añade interactividad y dinamismo a las páginas web.</p>
+            </div>
+            <div class="definition-box">
+                <strong>Paleta de colores:</strong>
+                <p>Conjunto de colores seleccionados para mantener coherencia estética en un diseño.</p>
+            </div>
+            <div class="definition-box">
+                <strong>Frontend:</strong>
+                <p>Parte de una aplicación web que interactúa directamente con el usuario.</p>
+            </div>
+            <div class="definition-box">
+                <strong>Backend:</strong>
+                <p>Parte de la aplicación que gestiona la lógica, datos y comunicación con el servidor.</p>
+            </div>
+            <div class="definition-box">
+                <strong>Responsive Design:</strong>
+                <p>Técnica de diseño que adapta la visualización de una página a diferentes dispositivos.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Definiciones Web</p>
+    </footer>
+</body>
+</html>
